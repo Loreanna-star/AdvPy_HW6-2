@@ -69,12 +69,12 @@ def del_from_dict(directories_dict, number):
     for value in list(directories_dict.values()):
         if number in value:
             value.remove(number)                 
-            return
+            return directories_dict
 
 def move(directories_dict, number, shelf_number):  
     del_from_dict(directories_dict, number)
     add_to_dict(directories_dict, number, shelf_number)
-    return
+    return directories_dict
 
 def add_shelf(directories_dict, shelf_number):
     directories_dict[shelf_number] = []

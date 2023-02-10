@@ -59,13 +59,20 @@ def fixture_shelf():
         (fixture_directories, "12345", None),
     ]
 
-def fixtures_add_to_list():
-    return [
-        "some_document",
-        "1234567",
-        "левый юзер",
-        [{"type": "passport", "number": "2207 876234", "name": "Василий Гупкин"},
-        {"type": "invoice", "number": "11-2", "name": "Геннадий Покемонов"},
-        {"type": "insurance", "number": "10006", "name": "Аристарх Павлов"},
-        {"type": "some_document", "number": "1234567", "name": "левый юзер"}]
-      ]
+
+def fixture_add_to_list():
+    return [{"type": "некий документ", "number": "1234567", "name": "некий юзер"}]
+
+def fixture_del_from_dict():
+    return {
+        '1': ['2207 876234', '5455 028765'],
+        '2': ['10006'],
+        '3': []
+      }
+
+def fixture_move():
+    return {
+        '1': ['2207 876234', '5455 028765'],
+        '2': ['10006'],
+        '3': ['11-2']
+      }
